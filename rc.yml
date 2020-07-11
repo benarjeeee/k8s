@@ -16,4 +16,4 @@ spec:
        - name: nginx-con
          image: nginx 
          ports:
-          - containerport: 80
+          - containerPort: 80
