@@ -9,13 +9,13 @@ spec:
  selector:
   matchLabels:
    app: nginx-app
-   type: front
+   env: front
  template:
    metadata:
     name: nginx-pod
     labels:
       app: nginx-app
-      type: front
+      env: front
    spec:
      containers:
        - name: nginx-con
