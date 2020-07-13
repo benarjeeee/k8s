@@ -9,17 +9,17 @@ spec:
  selector:
   matchLabels:
    app: redis
-   type: master
+   type: slave
    env: back
  template:
   metadata:
    labels:
     app: redis 
-    type: master 
+    type: slave
     env: back
   spec:
    containers:
-    - name: master
-      image:
+    - name: slave
+      image: gcr.io/google_samples/gb-redisslave:v1
       ports:
        - containerPort: 6379
