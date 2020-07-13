@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+ name: redis-slave
+ labels:
+  app: redis
+spec:
+ replicas: 1
+ selector:
+  matchLabels:
+   app: redis
+   type: master
+   env: back
+ template:
+  metadata:
+   labels:
+    app: redis 
+    type: master 
+    env: back
+  spec:
+   containers:
+    - name: master
+      image:
+      ports:
+       - containerPort: 6379
