@@ -7,6 +7,7 @@ metadata:
 spec:
  selector:
    app: nginx-app
+   env: front
  type: NodePort
  ports:
   - nodePort: 31000
